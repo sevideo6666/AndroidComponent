@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="0"
+    android:stretchColumns="1">
+
+
+    <!--整個Layout是一格大表格-->
+    <!--以TableRow來區別每一列-->
+    <!--TableLayout他會以最多欄位的那個列來統一讓所有列都有相同的欄數，除非在裡面透過
+    『android:layout_span』方法來讓某一格可以跨越欄數-->
+    <!--shrinkColumns:當寬不夠用時,指定的欄位能進行收縮,用","分隔-->
+    <!--shrinkColumns:當寬剩餘噷多時,指定的欄位能進行延伸,用","分隔-->
+
+    <TableRow>
+
+<!--        layout_span:設定該元件所跨越的列数 -->
+<!--        layout_column:直接指定顯示的列位置-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="But 1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="But 2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="But3" />
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="But 4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="But 5"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_column="1"
+            android:text="But 6" />
+    </TableRow>
+
+
+</TableLayout>
